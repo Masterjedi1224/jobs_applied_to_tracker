@@ -27,5 +27,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "proxy": "http://localhost:5000/",
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "mongoose": "^5.5.11",
+    "popper": "^1.0.1",
+    "react-bootstrap": "^1.0.0-beta.9",
+    "react-router-dom": "^5.0.0"
   }
 }
