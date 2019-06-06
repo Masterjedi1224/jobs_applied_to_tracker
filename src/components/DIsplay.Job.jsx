@@ -2,6 +2,18 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 export default class DisplayJob extends React.Component {
+
+    constructor(){
+        super();
+
+        this.removeJob = this.removeJob.bind(this);
+    }
+
+    removeJob(e){
+        e.preventDefault();
+        this.props.deleteJob(this.props.job_applied_to.company,this.props.job_applied_to._id);
+    }
+
     render(){
         return(
             <tr>
@@ -43,7 +55,7 @@ export default class DisplayJob extends React.Component {
                         }
                     }} className="btn btn-sm btn-outline-primary"><i className="fas fa-eye"></i></Link>
                     <button className="btn btn-sm btn-outline-warning"><i className="fas fa-bolt"></i></button>
-                    <button className="btn btn-sm btn-danger"><i className="fas fa-trash-alt"></i></button>
+                    <button className="btn btn-sm btn-danger" onClick={this.removeJob}><i className="fas fa-trash-alt"></i></button>
                 </td>
             </tr>
         );

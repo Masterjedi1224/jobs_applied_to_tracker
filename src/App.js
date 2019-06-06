@@ -1,19 +1,11 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import DisplayJobsAppliedTo from "./routes/Display.Jobs.Applied.To";
 import DisplayJobAppliedTo from './routes/View.Job.Applied.To';
-import AddEditJob from './routes/Add.Job';
-import {Link} from 'react-router-dom';
+import AddEditJob from './routes/Add.Edit.Job';
 import PathDoesNotExist from "./components/Path.Does.Not.Exists";
 import Header from './components/Header';
-
-const ShowApp = (props) => (
-
-            <div>
-                <h1>Hi</h1>
-            </div>
-);
 
 function App() {
   return (

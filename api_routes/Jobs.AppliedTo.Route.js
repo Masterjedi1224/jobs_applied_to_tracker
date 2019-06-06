@@ -63,13 +63,13 @@ router.put('/api/jobs_applied_to/:id', (req,res) => {
     });
 });
 
-router.delete('/api/jobs_applied_to', (req,res) => {
-    if(!req.query.id){
+router.delete('/api/jobs_applied_to/:id', (req,res) => {
+    if(!req.params.id){
         return res.status(400).send("Missing Parameter: id");
     }
 
     JobsAppliedToModel.deleteOne({
-        _id: req.query.id
+        _id: req.params.id
     }).then(doc => {
         res.json(doc);
     }).catch(err =>{
